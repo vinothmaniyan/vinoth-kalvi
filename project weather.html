@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>city</title>
+    <script type="text/javascript">
+        function show(){
+
+         var cname =document.getElementById("city").value; 
+            
+          var api=(`https://api.openweathermap.org/data/2.5/weather?q=${cname}&appid=d2c5ca36a9d2965575c74c1f3d36ca74`)
+        //    document.getElementById("res").innerHTML=api;
+           fetch(api)
+              .then((response)=>response.json())
+              .then((data)=>{
+                  console.log(data);
+                  document.getElementById("res1").innerHTML=data.weather[0].main;
+                  document.getElementById("res2").innerHTML=data.weather[0].description;
+                  document.getElementById("res3").innerHTML=data.wind.speed;
+                  document.getElementById("res4").innerHTML=data.main.temp;
+                  document.getElementById("res5").innerHTML=data.main.humidity;
+                  
+                  
+
+            
+            })
+
+              .catch((err)=>{console.log(err.toString())})
+
+          
+              
+        }
+    </script>
+    <style>
+        
+            
+        
+        body{
+            background-image:url(two.jpg);
+            background-size: cover;
+        
+             }
+             h1{
+                 font-size:60px;
+                 color: yellow;
+                 width: fit-content;
+                 border: 2px solid red;
+                 border-radius: 20px;
+                 box-shadow: 10px 10px 5px 5px yellow ;
+                 padding: 20px;
+                 font-weight: bold;
+             }
+             input[type="text"]{
+                 padding: 25px;
+                 border-radius: 25px;
+                 font-size: 20px;
+                 box-shadow: 5px 5px 3px 3px rgb(82, 81, 112);
+                 text-align: center;
+                 color: white;
+                 
+                 background-color:rgb(37, 37, 104);
+             }
+             button{
+                 font-size: 20px;
+                 padding: 10px 10px;
+                 border-radius: 15px;
+                 text-align: center;
+                 background-color:rgb(24, 24, 137);
+                 color: yellow;
+
+             }
+             .main{
+                 font-size: 40px;
+                 color:blue;
+                 background-color:rgb(162, 196, 209);
+                 
+                 width: fit-content;
+                 height:fit-content;
+                 padding:10px 130px;
+                 margin-top: 10px;
+                 border-radius: 25px;
+                 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                 opacity: 80%;
+                 box-shadow: 5px 5px;
+                 text-transform: capitalize;
+                 font-weight: bold;
+                 
+
+                
+             }
+    </style>
+
+</head>
+<body>
+    <center>
+        <h1>Live Weather Report in: M.Vinoth</h1>
+    <input type="text" id="city" placeholder="Enter city name">
+    <br>
+    <br>
+    <button onclick="show()">click me</button>
+    <div id="res"></div>
+    <div class="main">
+    Main weather report :<span id="res1"></span>
+    <br>
+    Detailed weather report :<span id="res2"></span>
+    <br>
+    Wind speed :<span id="res3"></span>
+    <br>
+    Temparture report :<span id="res4"></span>
+    <br>
+    Humidity report :<span id="res5"></span>
+    <br>
+    <div id="7"></div>
+    </div>
+
+</div>
+</center>
+</body>
+</html>
+
+
+
