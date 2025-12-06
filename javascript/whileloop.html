@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while loop</title>
+    <script type="text/javascript">
+        function show(){
+            var s=parseInt(document.getElementById("t1").value);
+            var e=parseInt(document.getElementById("t2").value);
+            
+            // while(s<=e){
+            //     document.getElementById("res").innerHTML+=(s+"");
+            //     s=s+1;
+            // }
+            while(s>=e){
+                document.getElementById("res").innerHTML-=(s+"");
+                s=s+1;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="enter start number"><br>
+    <input type="text" id="t2" placeholder="enter end number"><br>
+    <br>
+    <input type="button" onclick="show()" value="result">
+    <div id="res"></div>
+    
+</body>
+</html>

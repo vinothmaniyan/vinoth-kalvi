@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner text.html</title>
+    <script type="text/javascript">
+        // ore pagela result therium athukaka 
+    //  dis=()=>{
+    //     var n1=document.getElementById("t1").value;
+    //     var n2=document.getElementById("t2").value;
+    //     var tot=parseInt(n1)+parseInt(n2);
+    //     document.getElementById("res").innerHTML="total:"+tot;
+    // }
+   /* dis=()=>{
+        var n1=document.getElementById("t1").value;
+        var n2=document.getElementById("t2").value;
+        var tot=parseInt(n1)+parseInt(n2);
+        document.getElementById("res").innerHTML=n1+"+"+n2+"="+tot;*/
+    // }
+    // backtic symbol use pantrom ithu easy ah irukum
+    dis=()=>{
+        var n1=document.getElementById("t1").value;
+        var n2=document.getElementById("t2").value;
+        var tot=parseInt(n1)>parseInt(n2);
+        document.getElementById("res").innerHTML=`(${n1}<${n2})=${tot}`;
+    }
+</script>
+
+<body>
+  <div id="res">
+      <input type="text" id="t1" placeholder="Enter Number 1"><br>
+      <input type="text" id="t2" placeholder="Enter Number2"><br>
+      <button onclick="dis()">Find Total</button>
+      <input type="button" onclick="dis()" value="find total">
+  </div>
+    
+</body>
+</html>

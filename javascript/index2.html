@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>city</title>
+    <script type="text/javascript">
+        function show(){
+
+         var cname =document.getElementById("city").value; 
+            
+          var api=(`https://api.openweathermap.org/data/2.5/weather?q=${cname}&appid=d2c5ca36a9d2965575c74c1f3d36ca74`)
+           document.getElementById("res").innerHTML=api;
+           fetch(api)
+              .then((response)=>response.json())
+              .then((data)=>{
+                  console.log(data);
+                  document.getElementById("res1").innerHTML=data.weather[0].main;
+                  document.getElementById("res2").innerHTML=data.weather[0].description;
+                  document.getElementById("res3").innerHTML=data.wind.speed;
+                  document.getElementById("res4").innerHTML=data.main.temp;
+                  document.getElementById("res5").innerHTML=data.main.humidity;
+                  document.getElementById("res7").innerHTML=data.
+                  
+
+            
+            })
+
+              .catch((err)=>{console.log(err.toString())})
+          
+              
+        }
+    </script>
+
+</head>
+<body>
+    <input type="text" id="city" placeholder="Enter Your city">
+    <br>
+    <br>
+    <button onclick="show()">click me</button>
+    <div id="res"></div>
+    main weather report :<div id="res1"></div>
+    detailed weatherreport:<div id="res2"></div>
+    wind speed :<div id="res3"></div>
+    temparture report:<div id="res4"></div>
+    humidity report:<div id="res5"></div>
+    <div id="7"></div>
+
+</div>
+</body>
+</html>
+
+
+

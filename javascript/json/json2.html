@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script type="text/javascript">
+        var stud={
+            rno:1001,
+            sname:"vinoth",
+            marks:[99,100,66,85,76,78],
+            workplace:{
+                place1:"chennai",
+                place2:"karur",
+                place3:"kulithalai"
+            }
+        }
+            document.write("<br> student rno:"+stud.rno);
+            document.write(`<br> student s name:${stud.sname}`);
+            // document.write("<br> student mark:"+stud.marks[2]);
+            document.write("<br> student mark:"+stud.marks[0]);
+            // document.write("<br> student mark:"+stud.marks[3]);
+            document.write("<br> student work place:"+stud.workplace.place2);
+            document.write("<br> student work place:"+stud.workplace.place1);
+            document.write("<br> student work place:"+stud.workplace.place3);
+
+            var len=stud.marks.length;
+            for(i=0;i<len;i++){
+                document.write(`<br> mark:${i+1}=${stud.marks[i]}`)
+
+            }
+            // =====================2 method
+            
+            for(var s in stud.workplace)
+            {
+                document.write(`<br>${s}=${stud.workplace[s]}`);
+            }
+            for ( var z in stud.marks)
+            {
+                document.write(`<br>${z}=${stud.marks[z]}`);
+            }
+            // 
+            document.write(`<br>)
+        
+        
+    </script>
+    <!-- potu paru purium -->
+</head>
+<body>
+    
+</body>
+</html>

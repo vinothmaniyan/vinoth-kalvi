@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .myform{
+            display: flex;
+            flex-direction: column;
+            background-color: beige;
+            border-radius: 3px;
+            padding: 1em;
+            height: 100vh;
+        }
+        .row{
+            display: flex;
+            justify-content: center;
+        }
+        .column{
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+         }
+         .input-group{
+             display: flex;
+         }
+         .input-group>label{
+             margin-right: 1em;
+             padding: 1em ;
+         }
+         .myform input,
+         .myform select{
+             flex: 6;
+             padding: 5em;
+             margin-bottom: 1em;
+         }
+         .myform button{
+             padding: 1em;
+             background: green;
+             color: white;
+             border: 0;
+         }
+         .myform fieldset{
+             border: 0;
+         }
+         .gender >label,
+         .skills >label{
+             display: block;
+
+         }
+         
+    </style>
+</head>
+<body>
+        <form class="myform">
+            <div class="row">
+                <h1>Student Registeration form</h1>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="input-group">
+                        <label for="student_name">Name</label>
+                        <input id="student_name">
+                    </div>
+                    <div class="input-group">
+                        <label for="phone_number">Phone</label>
+                        <input type="tel" id="phone_number">
+
+                    </div>
+                    <div class="input-group">
+                         <label for="email_address">Email</label>
+                         <input type="email" id="email_address">
+
+                    </div>
+                    <div class="input-group">
+                        <label for="join_date">Date of Registration</label>
+                        <input type="datetime-local" id="join_date">
+                    </div>
+                    <div class="input-group">
+                        <label for="course">Course</label>
+                        <select id="course">
+                            <option value="" selected="selected">Select One</option>
+                            <option value="DCA">Diplomo in computer Application</option>
+                            <option value="HDCA">Honours Diplomo in computer Application</option>
+                            <option value="HDFD">Honest Diplomo in Full Stack Dveloper</option>
+                      </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="batch_timings">Batch Timings</label>
+                        <input type="text" id="batch_timings" list="timings">
+                        <datalist id="timings">
+                            <option value="9-11AM"></option>
+                            <option value="4-6PM"></option>
+                            <option value="6-8PM"></option>
+                        </datalist>
+                    </div>
+                </div>
+                <div class="column">
+                    <fieldset class="gender">
+                        <legend>Gender</legend>
+                        <label><input type="radio" name="gender" value="female">Female </label>
+                        <label> <input type="radio" name="gender" value="Male">Male</label>
+                        <label><input type="radio" name="gender" value="others">others</label>
+                    </fieldset>
+                    <fieldset class="skills">
+                       <legend>Skills Known</legend>
+                       <label><input type="checkbox" value="basic">MS Office</label>
+                       <label><input type="checkbox" value="language">Programming languages</label>
+                       <label><input type="checkbox" value="accounting">Tally</label>
+
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <button>Register Now</button>
+            </div>
+        </form>
+
+
+    
+</body>
+</html>

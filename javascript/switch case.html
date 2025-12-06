@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch case</title>
+
+<script type="text/javascript">
+    findres=()=>{
+        var m1=parseFloat(document.getElementById("n1").value);
+        var m2=parseFloat(document.getElementById("n2").value);
+        var choice=parseInt(document.getElementById("ch").value);
+        switch (choice)
+        {
+            case 1: document.getElementById("res").innerHTML="Addition:"+(m1+m2);
+            break;
+            case 2: document.getElementById("res").innerHTML="subtraction:"+(m1-m2);
+            break;
+            case 3: document.getElementById("res").innerHTML="Multiplication:"+(m1*m2);
+            break;
+            case 4: document.getElementById("res").innerHTML="Remainder:"+(m1%m2);
+            break;
+            case 5: document.getElementById("res").innerHTML="division:"+(m1+m2);
+            break;
+           default:   document.getElementById("res").innerHTML="Invalid Choice";
+        }
+
+    }
+
+</script>
+
+</head>
+<body>
+    <input type="text" id="n1" placeholder="Enter no 1"><br>
+    <input type="text" id="n2" placeholder="Enter no 2"><br>
+    <br>
+    1.add 2.sub 3.mul 4.div 5.remainder enter your choice:
+
+    <input type="text" id="ch" placeholder="Enter your choice"><br>
+<br>
+    <input type="button" onclick="findres()" value="result">
+    <div id="res"></div>
+    <!-- prigram ok marupadium refer paniko -->
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>city</title>
+    <script type="text/javascript">
+        function show(){
+        fetch ("https://api.openweathermap.org/data/2.5/weather?q=karur&appid=d2c5ca36a9d2965575c74c1f3d36ca74").then((res)=>{console.log(res)}).catch
+        ((err)=>{console.log(err.toString())})
+
+        }
+    </script>
+
+</head>
+<body>
+    <input type="text" id="one" placeholder="Enter Your Text">
+    <br>
+    <br>
+    <button onclick="show()">click me</button>
+    
+</body>
+</html>
+
+
+

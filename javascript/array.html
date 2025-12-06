@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <script>
+        function show()
+    {
+            var arr=[100,200,300,400,40,10,50,13,9,5,1];
+            var len=arr.length;
+
+         for(var i=0;i<len;i++)
+        {
+              if(arr[i]%2==0)
+             {
+             document.getElementById("res").innerHTML+="<br>"+arr[i];
+         
+            }
+        }
+    }
+
+    </script>
+
+</head>
+<body>
+    <button onclick="show()">click me</button>
+    <div id="res"></div>
+</body>
+</html>
