@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call backfunction </title>
+    <script type="text/javascript">
+        function show(){
+            document.getElementById("r1").innerHTML="line1";
+            document.getElementById("r2").innerHTML="line2";
+            setTimeout(()=>{
+                alert("this is alert message");
+            },3000);
+            document.getElementById("r3").innerHTML="line3";
+            document.getElementById("r4").innerHTML="line4";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="show()">click me</button>
+    <div id="r1"></div>
+    <div id="r2"></div>
+    <div id="r3"></div>
+    <div id="r4"></div>
+    
+</body>
+</html>
